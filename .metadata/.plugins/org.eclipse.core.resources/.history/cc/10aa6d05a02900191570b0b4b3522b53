@@ -46,36 +46,8 @@ public class GumballMachine {
     
     public void turnCrank()
     {
-    	while(has_coin == true){
-    		if(typeMachine == 1){
-    			if(total > 0 && num_gumballs > 0 ){
-    				num_gumballs--;
-    				total = total - 25;
-    				System.out.println("Gumball Ejected. Gumballs Remain = " + num_gumballs
-    						+ " Total Remains: " + total);
-    			}
-    			else if (total == 0){
-    				has_coin = false;
-    				System.out.println("Insert a Quarter.");
-    				return;
-    			}
-    			else if (num_gumballs == 0 && total > 0){
-    				System.out.println("Run out of gumball. Return " + total/25 + " quarter(s)");
-    				total = 0;
-    				return;    				
-    			}    			
-    		}
-    		
-    		if(typeMachine = 2){
-    			if
-    		}
-    	}
-    	
-    	/*
     	if ( this.has_coin )
     	{
-    		
-    		
     		if ( this.num_gumballs > 0 )
     		{
     			this.num_gumballs-- ;
@@ -86,12 +58,10 @@ public class GumballMachine {
     		{
     			System.out.println( "No More Gumballs!  Sorry, can't return your quarter." ) ;
     		}
-    		
     	}
     	else 
     	{
     		System.out.println( "Please insert a quarter" ) ;
-    	} */        
+    	}        
     }
-	
 }
