@@ -1,0 +1,41 @@
+
+public class Main {
+	public static void main(String[] args) {
+		// Test 1: more money > balls
+		GumballMachine gumballMachine1_0 = new GumballMachine(2, 1);		
+		System.out.println(gumballMachine1_0);
+		gumballMachine1_0.insertCoin( 25 );
+		gumballMachine1_0.insertCoin(25);
+		gumballMachine1_0.insertCoin(25);
+		gumballMachine1_0.turnCrank();
+		
+		
+		GumballMachine gumballMachine1_1 = new GumballMachine(5, 1);
+		System.out.println("\n" + gumballMachine1_1);
+		gumballMachine1_1.insertCoin(25);
+		gumballMachine1_1.insertCoin(25);
+		gumballMachine1_1.turnCrank();
+		
+		// Test2: wrong coin
+		gumballMachine1_1.insertCoin(25);
+		gumballMachine1_1.insertCoin(1);
+		gumballMachine1_1.turnCrank();
+		
+		// Test3: not enough coin
+		gumballMachine1_1.turnCrank();
+		System.out.println();
+		
+		
+
+		/*
+		System.out.println(gumballMachine);
+
+		gumballMachine.insertCoin( 25 );
+		gumballMachine.turnCrank();
+		gumballMachine.insertCoin( 25 );
+		gumballMachine.turnCrank();
+
+		System.out.println(gumballMachine);
+		*/
+	}
+}
