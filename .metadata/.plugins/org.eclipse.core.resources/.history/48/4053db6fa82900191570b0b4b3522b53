@@ -45,10 +45,10 @@ public class GumballMachine {
     
     public void turnCrank()
     {
-    	
+    	if(has_coin == false){
+    		hasNothing();
+    	}
     	while(has_coin == true){
-    		
-    		// Machine accept one quarter
     		if(typeMachine == 1){
     			if(total > 0 && num_gumballs > 0 ){
     				total = total - 25;
@@ -69,7 +69,6 @@ public class GumballMachine {
     			}    			
     		}
     		
-    		// Machine accepts 2 quarters
     		if(typeMachine == 2){
     			if(total >= 50 && num_gumballs > 0){
     				num_gumballs --;
@@ -78,10 +77,9 @@ public class GumballMachine {
     						+ " Total Remains: " + total);
     			}
     			
-    			else if (total < 50 && total > 0){
+    			else if (total < 50){
     				has_coin = false;
-    				System.out.println("Not enough quarters. Returned " + total/25 + " quarters.");
-    				total = 0;
+    				System.out.println("Insert two Quarters.");
     				break;
     			}
     			else if (num_gumballs == 0 && total > 0){
@@ -90,21 +88,6 @@ public class GumballMachine {
     				has_coin = false;
     				break;
     			}
-    			else if (total == 0){
-    				has_coin = false;
-    				break;
-    			}
-    		}
-    		
-    		// Machine accept any money
-    		if(typeMachine == 3){
-    			if(total >= 50 && num_gumballs > 0){
-    				num_gumballs --;
-    				total = total - 50;
-    				System.out.println("Gumball Ejected. Gumballs Remain = " + num_gumballs
-    						+ " Total Remains: " + total);
-    			}
-    			
     		}
     	}
     	
@@ -129,9 +112,7 @@ public class GumballMachine {
     	{
     		System.out.println( "Please insert a quarter" ) ;
     	} */   
-    	if(has_coin == false){
-    		hasNothing();
-    	}
+    	
     	
     }
 	
@@ -142,7 +123,7 @@ public class GumballMachine {
     		}
     		
     		else if (typeMachine == 2){
-    			System.out.println("Insert enough Quarters.");
+    			System.out.println("Insert two Quarters.");
     		}
     		else{
     			System.out.println("Insert coin(s).");

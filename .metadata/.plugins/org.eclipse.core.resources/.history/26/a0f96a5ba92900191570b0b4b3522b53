@@ -45,7 +45,9 @@ public class GumballMachine {
     
     public void turnCrank()
     {
-    	
+    	if(has_coin == false){
+    		hasNothing();
+    	}
     	while(has_coin == true){
     		
     		// Machine accept one quarter
@@ -129,9 +131,7 @@ public class GumballMachine {
     	{
     		System.out.println( "Please insert a quarter" ) ;
     	} */   
-    	if(has_coin == false){
-    		hasNothing();
-    	}
+    	
     	
     }
 	

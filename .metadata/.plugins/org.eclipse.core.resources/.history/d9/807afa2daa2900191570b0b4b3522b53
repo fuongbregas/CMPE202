@@ -57,7 +57,6 @@ public class Main {
 		gumballMachine2_1.insertCoin(25);
 		gumballMachine2_1.insertCoin(10);
 		gumballMachine2_1.turnCrank();
-		System.out.println();
 		
 		System.out.println("No coin test:");
 		gumballMachine2_1.turnCrank();
