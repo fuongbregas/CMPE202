@@ -35,7 +35,7 @@ public class GumballMachine {
     
     public void turnCrank()
     {
-    	// Loop is used to check if their is any coin inside machine
+    	
     	while(has_coin == true){
     		
     		// Machine 1 accept one quarter
@@ -115,14 +115,13 @@ public class GumballMachine {
     		}
     	}
     	
-    	// if there is no coin, call hasNothing function
+    	
     	if(has_coin == false){
     		hasNothing();
     	}
     	
     }
 	
-    // This function can be used when machine has no ball
     public void hasNothing(){
     	if(has_coin == false && num_gumballs > 0){
     		if (typeMachine == 1){
