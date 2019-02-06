@@ -152,11 +152,11 @@ public class GumballMachine {
     			System.out.println("Insert enough Quarters.");
     		}
     		else{
-    			System.out.println("No coin. Insert coin(s).");
+    			System.out.println("Insert coin(s).");
     		}    		
     	}
     	else if (num_gumballs == 0){
-    		System.out.println("Machine has no ball. Insert somewhere else");
+    		System.out.println("Machine has no balls. Insert somewhere else");
     	}
     }
 }

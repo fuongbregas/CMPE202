@@ -18,7 +18,7 @@ public class Main {
 		System.out.println("Crank turned!");
 		gumballMachine1_0.turnCrank();
 		
-		GumballMachine gumballMachine1_1 = new GumballMachine(6, 1);
+		GumballMachine gumballMachine1_1 = new GumballMachine(5, 1);
 		System.out.println("\n" + gumballMachine1_1);
 		gumballMachine1_1.insertCoin(25);
 		gumballMachine1_1.insertCoin(25);

@@ -1,7 +1,7 @@
 
 public class Main {
 	public static void main(String[] args) {
-		System.out.println("******* Machine 1 *******");
+		System.out.println("Machine 1:");
 		// Test 1: more money = balls
 		System.out.println("Money = gumballs Test:");
 		GumballMachine gumballMachine1_0 = new GumballMachine(3, 1);		
@@ -9,29 +9,24 @@ public class Main {
 		gumballMachine1_0.insertCoin( 25 );
 		gumballMachine1_0.insertCoin(25);
 		gumballMachine1_0.insertCoin(25);
-		System.out.println("Crank turned!");
 		gumballMachine1_0.turnCrank();
 		
 		System.out.println();
 		System.out.println("Money > 0 && Gumballs = 0 Test");
 		gumballMachine1_0.insertCoin( 25 );
-		System.out.println("Crank turned!");
 		gumballMachine1_0.turnCrank();
 		
-		GumballMachine gumballMachine1_1 = new GumballMachine(6, 1);
+		GumballMachine gumballMachine1_1 = new GumballMachine(5, 1);
 		System.out.println("\n" + gumballMachine1_1);
 		gumballMachine1_1.insertCoin(25);
 		gumballMachine1_1.insertCoin(25);
-		System.out.println("Crank turned!");
 		gumballMachine1_1.turnCrank();
 		System.out.println();
 		
 		// Test2: wrong coin
 		System.out.println("Wrong Coin Test: ");
 		gumballMachine1_1.insertCoin(25);
-		gumballMachine1_1.insertCoin(1); // WRONG COIN!
-		gumballMachine1_1.insertCoin(25);
-		System.out.println("Crank turned!");
+		gumballMachine1_1.insertCoin(1);
 		gumballMachine1_1.turnCrank();
 		System.out.println();
 		
@@ -40,7 +35,7 @@ public class Main {
 		gumballMachine1_1.turnCrank();
 		System.out.println();
 		
-		System.out.println("******* Machine 2 *******");
+		System.out.println("Machine 2:");
 		System.out.println("Money = gumballs Test");
 		GumballMachine gumballMachine2_0 = new GumballMachine(3, 2);
 		System.out.println(gumballMachine2_0);
@@ -50,13 +45,11 @@ public class Main {
 		gumballMachine2_0.insertCoin(25);
 		gumballMachine2_0.insertCoin(25);
 		gumballMachine2_0.insertCoin(25);
-		System.out.println("Crank turned!");
 		gumballMachine2_0.turnCrank();
 		System.out.println();
 		
 		System.out.println("Money > 0 && Gumballs = 0 Test");
 		gumballMachine2_0.insertCoin(25);
-		System.out.println("Crank turned!");
 		gumballMachine2_0.turnCrank();
 
 		System.out.println("\n0 < total < 50 Test:");
@@ -65,27 +58,22 @@ public class Main {
 		gumballMachine2_1.insertCoin(25);
 		gumballMachine2_1.insertCoin(25);
 		gumballMachine2_1.insertCoin(25);
-		System.out.println("Crank turned!");
 		gumballMachine2_1.turnCrank();
 		System.out.println();
 		
 		System.out.println("Wrong Coin Test: ");
 		gumballMachine2_1.insertCoin(25);
-		gumballMachine2_1.insertCoin(10); // WRONG COIN!
-		gumballMachine2_1.insertCoin(25);
-		gumballMachine2_1.insertCoin(25);
-		System.out.println("Crank turned!");
+		gumballMachine2_1.insertCoin(10);
 		gumballMachine2_1.turnCrank();
 		System.out.println();
 		
 		System.out.println("No coin test:");
-		System.out.println("Crank turned!");
 		gumballMachine2_1.turnCrank();
 		System.out.println();
 		
 		
 		
-		System.out.println("******* Machine 3 *******");
+		System.out.println("Machine 3:");
 		System.out.println("Money = gumballs Test:");
 		GumballMachine gumballMachine3_0 = new GumballMachine(2, 3);
 		System.out.println(gumballMachine3_0);
@@ -95,32 +83,9 @@ public class Main {
 		gumballMachine3_0.insertCoin(10);
 		gumballMachine3_0.insertCoin(10);
 		gumballMachine3_0.insertCoin(5);
-		System.out.println("Crank turned!");
 		gumballMachine3_0.turnCrank();
 		System.out.println();
 		
-		System.out.println("Money > 0 && Gumballs = 0 Test");
-		gumballMachine3_0.insertCoin(1);
-		System.out.println("Crank turned!");
-		gumballMachine3_0.turnCrank();
 		
-		System.out.println("\n0 < total < 50 Test:");
-		GumballMachine gumballMachine3_1 = new GumballMachine(5, 3);
-		System.out.println(gumballMachine3_1);
-		gumballMachine3_1.insertCoin(25);
-		gumballMachine3_1.insertCoin(25);
-		gumballMachine3_1.insertCoin(25);
-		gumballMachine3_1.insertCoin(10);
-		gumballMachine3_1.insertCoin(10);
-		gumballMachine3_1.insertCoin(5);
-		gumballMachine3_1.insertCoin(1);
-		System.out.println("Crank turned!");
-		gumballMachine3_1.turnCrank();
-		System.out.println();
-		
-		System.out.println("No coin test:");
-		System.out.println("Crank turned!");
-		gumballMachine3_1.turnCrank();
-		System.out.println();
 	}
 }

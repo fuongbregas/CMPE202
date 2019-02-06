@@ -18,7 +18,7 @@ public class Main {
 		System.out.println("Crank turned!");
 		gumballMachine1_0.turnCrank();
 		
-		GumballMachine gumballMachine1_1 = new GumballMachine(6, 1);
+		GumballMachine gumballMachine1_1 = new GumballMachine(5, 1);
 		System.out.println("\n" + gumballMachine1_1);
 		gumballMachine1_1.insertCoin(25);
 		gumballMachine1_1.insertCoin(25);
@@ -29,8 +29,7 @@ public class Main {
 		// Test2: wrong coin
 		System.out.println("Wrong Coin Test: ");
 		gumballMachine1_1.insertCoin(25);
-		gumballMachine1_1.insertCoin(1); // WRONG COIN!
-		gumballMachine1_1.insertCoin(25);
+		gumballMachine1_1.insertCoin(1);
 		System.out.println("Crank turned!");
 		gumballMachine1_1.turnCrank();
 		System.out.println();
@@ -71,7 +70,7 @@ public class Main {
 		
 		System.out.println("Wrong Coin Test: ");
 		gumballMachine2_1.insertCoin(25);
-		gumballMachine2_1.insertCoin(10); // WRONG COIN!
+		gumballMachine2_1.insertCoin(10);
 		gumballMachine2_1.insertCoin(25);
 		gumballMachine2_1.insertCoin(25);
 		System.out.println("Crank turned!");

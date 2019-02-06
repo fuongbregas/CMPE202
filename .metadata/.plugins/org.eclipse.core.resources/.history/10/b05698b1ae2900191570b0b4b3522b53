@@ -21,8 +21,8 @@ public class GumballMachine {
         		this.has_coin = true;
         	}
         	else{
-        		System.out.println("Only 25 cents accepted. Returned + " + coin + " cent(s)");
-        		//this.has_coin = false;
+        		System.out.println("Only 25 cents accepted. Returned all coins");
+        		this.has_coin = false;
         	}
         }
             
@@ -94,15 +94,15 @@ public class GumballMachine {
     				System.out.println("Gumball Ejected. Gumballs Remain = " + num_gumballs
     						+ " Total Remains: " + total);
     			}
-    			else if (total < 50 && total > 0 && num_gumballs != 0){    				
-    				System.out.println("Not enough money. Returned " + total + " cent(s).");    
+    			else if (total < 50 && total > 0 && num_gumballs != 0){
     				has_coin = false;
     				total = 0;
+    				System.out.println("Not enough money. Returned all coins.");    				
     				break;
     			}
     			
     			else if (num_gumballs == 0 && total > 0){
-    				System.out.println("Run out of gumball. Returned " + total + " cent(s).");
+    				System.out.println("Run out of gumball. Return all coins");
     				total = 0;
     				has_coin = false;
     				break;
@@ -152,11 +152,11 @@ public class GumballMachine {
     			System.out.println("Insert enough Quarters.");
     		}
     		else{
-    			System.out.println("No coin. Insert coin(s).");
+    			System.out.println("Insert coin(s).");
     		}    		
     	}
     	else if (num_gumballs == 0){
-    		System.out.println("Machine has no ball. Insert somewhere else");
+    		System.out.println("Machine has no balls. Insert somewhere else");
     	}
     }
 }
