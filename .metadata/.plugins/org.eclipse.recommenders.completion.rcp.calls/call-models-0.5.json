@@ -8,5 +8,10 @@
     "location": "E:\\Dropbox\\Classes\\CMPE-202\\CMPE202\\lab1\\gumball-java-typical\\src",
     "status": "UNRESOLVED",
     "error": "No class path info available for \u0027E:\\Dropbox\\Classes\\CMPE-202\\CMPE202\\lab1\\gumball-java-typical\\src\u0027. Skipped."
+  },
+  "E:\\Dropbox\\Classes\\CMPE-202\\CMPE202\\lab1\\gumball-java-pattern\\src": {
+    "location": "E:\\Dropbox\\Classes\\CMPE-202\\CMPE202\\lab1\\gumball-java-pattern\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027E:\\Dropbox\\Classes\\CMPE-202\\CMPE202\\lab1\\gumball-java-pattern\\src\u0027. Skipped."
   }
 }

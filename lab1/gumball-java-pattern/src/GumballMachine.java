@@ -6,15 +6,23 @@ public class GumballMachine {
 	State noQuarterState;
 	State hasQuarterState;
 	State soldState;
+	State hasCoinState;
+	State noCointState;
  
 	State state = soldOutState;
+	int total = 0;
 	int count = 0;
+	int typeMachine = 0;
+	//int coin;
  
-	public GumballMachine(int numberGumballs) {
-		soldOutState = new SoldOutState(this);
-		noQuarterState = new NoQuarterState(this);
-		hasQuarterState = new HasQuarterState(this);
-		soldState = new SoldState(this);
+	public GumballMachine(int numberGumballs, int typeMachine) {
+		
+			soldOutState = new SoldOutState(this);
+			noQuarterState = new NoQuarterState(this);
+			hasQuarterState = new HasQuarterState(this);
+			soldState = new SoldState(this);
+			
+		
 
 		this.count = numberGumballs;
  		if (numberGumballs > 0) {
@@ -22,8 +30,10 @@ public class GumballMachine {
 		} 
 	}
  
-	public void insertQuarter() {
-		state.insertQuarter();
+	public void insertQuarter(int coin) {
+		total = total + coin;
+		state.insertQuarter(coin);
+		System.out.println("Coin: " + coin);
 	}
  
 	public void ejectQuarter() {
@@ -31,8 +41,36 @@ public class GumballMachine {
 	}
  
 	public void turnCrank() {
+		System.out.println("Total: " + total);
+		
 		state.turnCrank();
-		state.dispense();
+		
+		if(typeMachine == 1){
+			if(total == 25){
+				state.dispense();
+			}
+			else{
+				state.ejectQuarter();
+			}
+		}
+		
+		else if (typeMachine == 2){
+			if(total == 50){
+				state.dispense();
+			}
+			else{
+				state.ejectQuarter();
+			}
+		}
+		else if (typeMachine == 3){
+			if(total == 50){
+				state.dispense();
+			}
+			else{
+				state.ejectQuarter();
+			}
+		}
+		
 	}
 
 	void setState(State state) {
@@ -64,11 +102,17 @@ public class GumballMachine {
     }
 
     public State getNoQuarterState() {
-        return noQuarterState;
+    	if(typeMachine == 1 || typeMachine == 2){
+    		return noQuarterState;
+    	}
+        return noCointState;
     }
 
     public State getHasQuarterState() {
-        return hasQuarterState;
+    	if(typeMachine == 1 || typeMachine == 2){
+    		return hasQuarterState;
+    	}
+        return hasCoinState;
     }
 
     public State getSoldState() {
