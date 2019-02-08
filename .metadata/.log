@@ -15,6 +15,7 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.m2e.logback.appender 4 0 2019-02-05 15:08:07.203
 !MESSAGE Failed to open search index.
+<<<<<<< HEAD
 !SESSION 2019-02-07 13:42:57.378 -----------------------------------------------
 eclipse.buildId=4.3.0.M20130911-1000
 java.version=1.8.0_151
@@ -4188,3 +4189,5 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.e4.ui.css.swt 4 0 2019-02-08 11:13:42.389
 !MESSAGE Failed to get bundle for: bundleclass://net.jeeeyul.eclipse.themes/net.jeeeyul.eclipse.themes.rendering.JeeeyulsTabRenderer
+=======
+>>>>>>> parent of 64b58be... Init
