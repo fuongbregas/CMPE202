@@ -22,6 +22,8 @@
 			<item value="C:\Users\franc\Desktop\theme-23557.epf"/>
 		</list>
 	</section>
+	<section name="NewWizardAction">
+	</section>
 	<section name="ImportExportAction">
 		<item value="org.eclipse.ui.wizards.import.Preferences" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
 		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">

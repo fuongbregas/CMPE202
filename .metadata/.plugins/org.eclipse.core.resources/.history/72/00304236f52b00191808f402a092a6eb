@@ -1,0 +1,9 @@
+
+
+public interface State {
+ 
+	public void insertCoint();
+	public void ejectQuarter();
+	public void turnCrank();
+	public void dispense();
+}

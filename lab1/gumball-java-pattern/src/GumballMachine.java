@@ -8,26 +8,42 @@ public class GumballMachine {
 	State soldState;
  
 	State state = soldOutState;
-	int count = 0;
+	int numberGumballs = 0;
+	int price = 0;
  
-	public GumballMachine(int numberGumballs) {
+	public GumballMachine(int numberGumballs, int typeMachine) {
 		soldOutState = new SoldOutState(this);
 		noQuarterState = new NoQuarterState(this);
 		hasQuarterState = new HasQuarterState(this);
 		soldState = new SoldState(this);
 
-		this.count = numberGumballs;
- 		if (numberGumballs > 0) {
+		this.numberGumballs = numberGumballs;
+		
+		if (numberGumballs > 0) {
 			state = noQuarterState;
 		} 
+		
+		if(typeMachine == 1){
+			price = 25;
+		}
+		
+		else if (typeMachine == 2){
+			price = 50;
+		}
+		
+		else if (typeMachine == 3){
+			price = 50;
+		}
+		
+ 		
 	}
  
-	public void insertQuarter() {
-		state.insertQuarter();
+	public void insertCoin(int coin) {
+		state.insertCoin(coin);
 	}
  
-	public void ejectQuarter() {
-		state.ejectQuarter();
+	public void ejectCoin() {
+		state.ejectCoin();
 	}
  
 	public void turnCrank() {
@@ -41,17 +57,17 @@ public class GumballMachine {
  
 	void releaseBall() {
 		System.out.println("A gumball comes rolling out the slot...");
-		if (count != 0) {
-			count = count - 1;
+		if (numberGumballs != 0) {
+			numberGumballs = numberGumballs - 1;
 		}
 	}
  
 	int getCount() {
-		return count;
+		return numberGumballs;
 	}
  
 	void refill(int count) {
-		this.count = count;
+		this.numberGumballs = count;
 		state = noQuarterState;
 	}
 
@@ -79,8 +95,8 @@ public class GumballMachine {
 		StringBuffer result = new StringBuffer();
 		result.append("\nMighty Gumball, Inc.");
 		result.append("\nJava-enabled Standing Gumball Model #2004");
-		result.append("\nInventory: " + count + " gumball");
-		if (count != 1) {
+		result.append("\nInventory: " + numberGumballs + " gumball");
+		if (numberGumballs != 1) {
 			result.append("s");
 		}
 		result.append("\n");
