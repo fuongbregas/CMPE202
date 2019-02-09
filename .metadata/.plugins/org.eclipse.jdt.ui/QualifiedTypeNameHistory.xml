@@ -4,7 +4,7 @@
 <fullyQualifiedTypeName name="SoldState"/>
 <fullyQualifiedTypeName name="HasCoinState"/>
 <fullyQualifiedTypeName name="NoCoinState"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="GumballMachine"/>
 <fullyQualifiedTypeName name="SoldOutState"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>
