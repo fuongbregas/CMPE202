@@ -97,10 +97,8 @@ public class GumballMachine {
     }
  
     public int getTotal(){
-    	return total;
+    	
     }
-    
-    
     
 	public String toString() {
 		StringBuffer result = new StringBuffer();

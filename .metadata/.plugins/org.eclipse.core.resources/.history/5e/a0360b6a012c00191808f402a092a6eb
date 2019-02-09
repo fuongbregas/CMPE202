@@ -29,7 +29,6 @@ public class SoldState implements State {
 			else{
 				gumballMachine.setState(gumballMachine.getHasCoinState());
 			}
-			gumballMachine.releaseBall();
 			
 		} else {
 			System.out.println("Oops, out of gumballs!");

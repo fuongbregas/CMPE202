@@ -8,16 +8,16 @@ public class NoCoinState implements State {
     }
  
 	public void insertCoin(int coin) {
-		System.out.println("You inserted " + coin + " cent(s)");
+		System.out.println("You inserted a quarter");
 		gumballMachine.setState(gumballMachine.getHasCoinState());
 	}
  
 	public void ejectCoin() {
-		System.out.println("You haven't inserted any coin");
+		System.out.println("You haven't inserted a quarter");
 	}
  
 	public void turnCrank() {
-		System.out.println("You turned, but there's no coin");
+		System.out.println("You turned, but there's no quarter");
 	 }
  
 	public void dispense() {
@@ -25,6 +25,6 @@ public class NoCoinState implements State {
 	} 
  
 	public String toString() {
-		return "waiting for coin";
+		return "waiting for quarter";
 	}
 }

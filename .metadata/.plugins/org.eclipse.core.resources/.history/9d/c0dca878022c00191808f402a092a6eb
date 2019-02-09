@@ -20,9 +20,7 @@ public class HasCoinState implements State {
  
 	public void turnCrank() {
 		System.out.println("You turned...");
-		if(gumballMachine.getTotal() >= gumballMachine.getPrice()){
-			gumballMachine.setState(gumballMachine.getSoldState());
-		}		
+		gumballMachine.setState(gumballMachine.getSoldState());
 	}
 
     public void dispense() {
