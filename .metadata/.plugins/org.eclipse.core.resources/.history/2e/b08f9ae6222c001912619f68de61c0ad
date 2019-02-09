@@ -76,7 +76,6 @@ public class Main {
 		// User want coin back
 		gumballMachine3.insertCoin(1);
 		gumballMachine3.insertCoin(25);
-		gumballMachine3.turnCrank();
 		System.out.println("Total M3: " + gumballMachine3.getTotal());		
 		gumballMachine3.ejectCoin();
 		

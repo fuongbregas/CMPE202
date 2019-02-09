@@ -65,21 +65,11 @@ public class Main {
 		gumballMachine3.insertCoin(1);
 		gumballMachine3.insertCoin(1);
 		gumballMachine3.insertCoin(1);
-		
 		System.out.println();
 		System.out.println("Gumball Machine type 3. Insert two 10 cents + four 1 cents\n"
 				+ "*** Expecting 1 gumballs out *** ");
 		gumballMachine3.turnCrank();
 
-		System.out.println(gumballMachine3.toString());
-		
-		// User want coin back
-		gumballMachine3.insertCoin(1);
-		gumballMachine3.insertCoin(25);
-		gumballMachine3.turnCrank();
-		System.out.println("Total M3: " + gumballMachine3.getTotal());		
-		gumballMachine3.ejectCoin();
-		
 		System.out.println(gumballMachine3.toString());
 	}
 }
