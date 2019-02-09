@@ -29,12 +29,8 @@ public class Main {
 		gumMachine1.insertCoin(25);
 		gumMachine1.insertCoin(1);
 		gumMachine1.insertCoin(25);
-		
 		gumMachine1.turnCrank();
-		System.out.println("Current Total M1 = " + gumMachine1.getTotal());
 		System.out.println("Num ball: " + gumMachine1.getNumberBall());
-		gumMachine1.turnCrank();
-		System.out.println(gumMachine1.toString() + "\n");
 		
 		// Test Machine 2
 		GumballMachine gumballMachine2 = new GumballMachine(5, 2);

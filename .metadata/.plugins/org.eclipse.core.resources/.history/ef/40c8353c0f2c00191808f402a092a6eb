@@ -6,8 +6,8 @@ public class Main {
 		// Test Machine 1
 		GumballMachine gumballMachine = new GumballMachine(5, 1);
 		System.out.println("Gumball Machine type 1. Insert two 25 cents + 1 cent\n"
-				+ "*** Expecting 2 gumballs out *** ");
-		System.out.println();
+				+ "*** Expecting 2 gumballs out ***: \n\n");
+		
 		gumballMachine.insertCoin(25);		
 		gumballMachine.insertCoin(25);
 		gumballMachine.insertCoin(1);
@@ -19,38 +19,16 @@ public class Main {
 		gumballMachine.insertCoin(25);
 		System.out.println("Current Total M1 = " + gumballMachine.getTotal());
 		gumballMachine.turnCrank();
-		System.out.println(gumballMachine.toString());
-		
-		// Test Machine 1 with no 1 ball then out of stock
-		GumballMachine gumMachine1 = new GumballMachine(1, 1);
-		System.out.println("\nGumball Machine type 1 with 1 ball then out of stock. Insert two 25 cents + 1 cent\n"
-				+ "*** Expecting 1 gumballs out *** ");
-		System.out.println();
-		gumMachine1.insertCoin(25);
-		gumMachine1.insertCoin(1);
-		gumMachine1.insertCoin(25);
-		
-		gumMachine1.turnCrank();
-		System.out.println("Current Total M1 = " + gumMachine1.getTotal());
-		System.out.println("Num ball: " + gumMachine1.getNumberBall());
-		gumMachine1.turnCrank();
-		System.out.println(gumMachine1.toString() + "\n");
-		
+
 		// Test Machine 2
 		GumballMachine gumballMachine2 = new GumballMachine(5, 2);
 		System.out.println("\nGumball Machine type 2. Insert two 25 cents + 10 cent\n"
-				+ "*** Expecting 1 gumballs out ***");
-		System.out.println();
+				+ "*** Expecting 1 gumballs out ***: ");
 		gumballMachine2.insertCoin(25);
 		gumballMachine2.insertCoin(10);
 		gumballMachine2.insertCoin(25);
 		System.out.println("Current Total M2 = " + gumballMachine2.getTotal());
 		gumballMachine2.turnCrank();
 		System.out.println("Current Total M2 = " + gumballMachine2.getTotal());
-		System.out.println(gumballMachine2.toString());
-		
-		
-		// Test Machine 3
-		GumballMachine gumballMachine3 = new GumballMachine(5, 3);
 	}
 }

@@ -58,7 +58,7 @@ public class SoldState implements State {
 				gumballMachine.setState(gumballMachine.getNoCoinState());
 			}
 		}
-		else if(gumballMachine.getNumberBall() == 0 && gumballMachine.getTotal() >= 0){
+		else if(gumballMachine.getNumberBall() == 0){
 			System.out.println("Machine out of ball. Returned " + gumballMachine.getTotal() + " cent(s)");
 			gumballMachine.setTotal(0);
 			gumballMachine.setState(gumballMachine.getSoldOutState());		

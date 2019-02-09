@@ -91,7 +91,9 @@ public class GumballMachine {
 		}
 	}
  
-	
+	int getCount() {
+		return numberGumballs;
+	}
  
 	void refill(int count) {
 		this.numberGumballs = count;

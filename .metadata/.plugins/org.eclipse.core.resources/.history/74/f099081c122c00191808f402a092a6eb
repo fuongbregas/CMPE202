@@ -20,16 +20,13 @@ public class HasCoinState implements State {
  
 	public void turnCrank() {
 		System.out.println("You turned...");
-		
-		if(gumballMachine.getNumberBall() <= 0){
+		if(gumballMachine.getTotal() >= gumballMachine.getPrice()){
+			gumballMachine.setState(gumballMachine.getSoldState());
+		}
+		if(gumballMachine.getNumberBall() == 0){
 			System.out.println("Machine is empty. Returned " + gumballMachine.getTotal() + " cent(s)");
 			gumballMachine.setTotal(0);
 			gumballMachine.setState(gumballMachine.getSoldState());
-		}
-		else{
-			if(gumballMachine.getTotal() >= gumballMachine.getPrice()){
-				gumballMachine.setState(gumballMachine.getSoldState());
-			}
 		}
 	}
 

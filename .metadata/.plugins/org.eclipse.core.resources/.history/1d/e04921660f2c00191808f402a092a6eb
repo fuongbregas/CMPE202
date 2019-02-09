@@ -47,7 +47,7 @@ public class GumballMachine {
 				state.insertCoin(coin);
 			}
 			else {
-				System.out.println("Wrong Coin. Return " + coin + " cent(s)");
+				System.out.println("Wrong Coin");
 			}
 		}
 		else if (typeMachine == 2){
@@ -56,7 +56,7 @@ public class GumballMachine {
 				state.insertCoin(coin);
 			}
 			else {
-				System.out.println("Wrong Coin. Return " + coin + " cent(s)");
+				System.out.println("Wrong Coin");
 			}
 		}
 		else if (typeMachine == 3){
@@ -81,17 +81,15 @@ public class GumballMachine {
 	}
  
 	void releaseBall() {
-		
+		System.out.println("A gumball comes rolling out the slot...");
 		if (numberGumballs != 0) {
 			numberGumballs = numberGumballs - 1;
-			System.out.println("A gumball comes rolling out the slot...");
-		}
-		else {
-			state = getSoldOutState();
 		}
 	}
  
-	
+	int getCount() {
+		return numberGumballs;
+	}
  
 	void refill(int count) {
 		this.numberGumballs = count;
@@ -128,10 +126,6 @@ public class GumballMachine {
     
     public void setTotal(int total){
     	this.total = total;
-    }
-    
-    public int getNumberBall(){
-    	return numberGumballs;
     }
     
 	public String toString() {

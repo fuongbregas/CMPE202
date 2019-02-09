@@ -81,17 +81,15 @@ public class GumballMachine {
 	}
  
 	void releaseBall() {
-		
+		System.out.println("A gumball comes rolling out the slot...");
 		if (numberGumballs != 0) {
 			numberGumballs = numberGumballs - 1;
-			System.out.println("A gumball comes rolling out the slot...");
-		}
-		else {
-			state = getSoldOutState();
 		}
 	}
  
-	
+	int getCount() {
+		return numberGumballs;
+	}
  
 	void refill(int count) {
 		this.numberGumballs = count;
