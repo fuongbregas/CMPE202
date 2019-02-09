@@ -3,25 +3,24 @@
 public class GumballMachine {
  
 	State soldOutState;
-	State noCoinState;
-	State hasCoinState;
+	State noQuarterState;
+	State hasQuarterState;
 	State soldState;
  
 	State state = soldOutState;
 	int numberGumballs = 0;
 	int price = 0;
-	int total = 0;
  
 	public GumballMachine(int numberGumballs, int typeMachine) {
 		soldOutState = new SoldOutState(this);
-		noCoinState = new NoCoinState(this);
-		hasCoinState = new HasCoinState(this);
+		noQuarterState = new NoQuarterState(this);
+		hasQuarterState = new HasCoinState(this);
 		soldState = new SoldState(this);
 
 		this.numberGumballs = numberGumballs;
 		
 		if (numberGumballs > 0) {
-			state = noCoinState;
+			state = noQuarterState;
 		} 
 		
 		if(typeMachine == 1){
@@ -69,7 +68,7 @@ public class GumballMachine {
  
 	void refill(int count) {
 		this.numberGumballs = count;
-		state = noCoinState;
+		state = noQuarterState;
 	}
 
     public State getState() {
@@ -80,26 +79,18 @@ public class GumballMachine {
         return soldOutState;
     }
 
-    public State getNoCoinState() {
-        return noCoinState;
+    public State getNoQuarterState() {
+        return noQuarterState;
     }
 
-    public State getHasCoinState() {
-        return hasCoinState;
+    public State getHasQuarterState() {
+        return hasQuarterState;
     }
 
     public State getSoldState() {
         return soldState;
     }
-    
-    public int getPrice(){
-    	return price;
-    }
  
-    public int getTotal(){
-    	
-    }
-    
 	public String toString() {
 		StringBuffer result = new StringBuffer();
 		result.append("\nMighty Gumball, Inc.");
