@@ -80,13 +80,8 @@ public class GumballMachine {
 	}
  
 	public void turnCrank() {
-		if(numberGumballs == 0){
-			state = soldOutState;
-		}
-		else{
-			state.turnCrank();		
-			state.dispense();
-		}
+		state.turnCrank();		
+		state.dispense();
 		
 	}
 

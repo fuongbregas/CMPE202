@@ -25,9 +25,6 @@ public class GumballMachine {
 		if (numberGumballs > 0) {
 			state = noCoinState;
 		} 
-		else {
-			state = soldOutState;
-		}
 		
 		if(typeMachine == 1){
 			price = 25;
@@ -44,34 +41,28 @@ public class GumballMachine {
 	}
  
 	public void insertCoin(int coin) {
-		if(numberGumballs == 0){
-			
-		}
-		else {
-			if(typeMachine == 1){
-				if(coin == 25){
-					total = total + coin;
-					state.insertCoin(coin);
-				}
-				else {
-					System.out.println("Wrong Coin. Return " + coin + " cent(s)");
-				}
-			}
-			else if (typeMachine == 2){
-				if(coin == 25){
-					total = total + coin;
-					state.insertCoin(coin);
-				}
-				else {
-					System.out.println("Wrong Coin. Return " + coin + " cent(s)");
-				}
-			}
-			else if (typeMachine == 3){
+		if(typeMachine == 1){
+			if(coin == 25){
 				total = total + coin;
 				state.insertCoin(coin);
-			}		
+			}
+			else {
+				System.out.println("Wrong Coin. Return " + coin + " cent(s)");
+			}
 		}
-		
+		else if (typeMachine == 2){
+			if(coin == 25){
+				total = total + coin;
+				state.insertCoin(coin);
+			}
+			else {
+				System.out.println("Wrong Coin. Return " + coin + " cent(s)");
+			}
+		}
+		else if (typeMachine == 3){
+			total = total + coin;
+			state.insertCoin(coin);
+		}		
 	}
  
 	public void ejectCoin() {
@@ -80,13 +71,8 @@ public class GumballMachine {
 	}
  
 	public void turnCrank() {
-		if(numberGumballs == 0){
-			state = soldOutState;
-		}
-		else{
-			state.turnCrank();		
-			state.dispense();
-		}
+		state.turnCrank();		
+		state.dispense();
 		
 	}
 

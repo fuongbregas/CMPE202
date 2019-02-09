@@ -4,7 +4,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// Test Machine 1
-		GumballMachine gumballMachine = new GumballMachine(0, 1);
+		GumballMachine gumballMachine = new GumballMachine(5, 1);
 		System.out.println("Gumball Machine type 1. Insert two 25 cents + 1 cent\n"
 				+ "*** Expecting 2 gumballs out *** ");
 		System.out.println();
