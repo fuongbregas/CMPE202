@@ -10,3 +10,4 @@
 1549667628868	Rename field 'hasQuarterState'
 1549667649935	Rename method 'getHasQuarterState'
 1549667659051	Rename method 'getNoQuarterState'
+1549680964459	Rename local variable 'gumMachine1'

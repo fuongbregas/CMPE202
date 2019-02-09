@@ -74,9 +74,9 @@ public class GumballMachine {
 		
 	}
  
-	public void ejectCoin() {
-		total = 0;
+	public void ejectCoin() {		
 		state.ejectCoin();
+		total = 0;
 	}
  
 	public void turnCrank() {
@@ -99,6 +99,7 @@ public class GumballMachine {
 		if (numberGumballs != 0) {
 			numberGumballs = numberGumballs - 1;
 			System.out.println("A gumball comes rolling out the slot...");
+			
 		}
 		else {
 			state = getSoldOutState();

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="State"/>
-<fullyQualifiedTypeName name="GumballMachine"/>
-<fullyQualifiedTypeName name="SoldOutState"/>
 <fullyQualifiedTypeName name="SoldState"/>
 <fullyQualifiedTypeName name="HasCoinState"/>
 <fullyQualifiedTypeName name="NoCoinState"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="GumballMachine"/>
+<fullyQualifiedTypeName name="SoldOutState"/>
 </qualifiedTypeNameHistroy>
