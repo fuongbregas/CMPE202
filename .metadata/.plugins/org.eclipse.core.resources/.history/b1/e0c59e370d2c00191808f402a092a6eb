@@ -21,7 +21,7 @@ public class SoldState implements State {
 	}
  
 	public void dispense() {
-		//gumballMachine.releaseBall();
+		gumballMachine.releaseBall();
 		if (gumballMachine.getCount() > 0) {
 			if(gumballMachine.getTotal() == gumballMachine.getPrice()){				
 				gumballMachine.setState(gumballMachine.getNoCoinState());

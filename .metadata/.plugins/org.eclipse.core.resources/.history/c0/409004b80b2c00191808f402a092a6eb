@@ -36,14 +36,14 @@ public class GumballMachine {
 		
 		else if (typeMachine == 3){
 			price = 50;
-		}		
+		}
+		
  		
 	}
  
 	public void insertCoin(int coin) {
 		if(typeMachine == 1){
 			if(coin == 25){
-				total = total + coin;
 				state.insertCoin(coin);
 			}
 			else {
@@ -52,7 +52,6 @@ public class GumballMachine {
 		}
 		else if (typeMachine == 2){
 			if(coin == 25){
-				total = total + coin;
 				state.insertCoin(coin);
 			}
 			else {
@@ -60,20 +59,17 @@ public class GumballMachine {
 			}
 		}
 		else if (typeMachine == 3){
-			total = total + coin;
 			state.insertCoin(coin);
 		}		
 	}
  
 	public void ejectCoin() {
-		total = 0;
 		state.ejectCoin();
 	}
  
 	public void turnCrank() {
-		state.turnCrank();		
+		state.turnCrank();
 		state.dispense();
-		
 	}
 
 	void setState(State state) {
@@ -124,9 +120,7 @@ public class GumballMachine {
     	return total;
     }
     
-    public void setTotal(int total){
-    	this.total = total;
-    }
+    
     
 	public String toString() {
 		StringBuffer result = new StringBuffer();

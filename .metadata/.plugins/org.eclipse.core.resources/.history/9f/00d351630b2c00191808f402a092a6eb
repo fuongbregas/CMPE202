@@ -11,15 +11,13 @@ public class GumballMachine {
 	int numberGumballs = 0;
 	int price = 0;
 	int total = 0;
-	int typeMachine;
  
 	public GumballMachine(int numberGumballs, int typeMachine) {
 		soldOutState = new SoldOutState(this);
 		noCoinState = new NoCoinState(this);
 		hasCoinState = new HasCoinState(this);
 		soldState = new SoldState(this);
-		
-		this.typeMachine = typeMachine;
+
 		this.numberGumballs = numberGumballs;
 		
 		if (numberGumballs > 0) {
@@ -36,44 +34,22 @@ public class GumballMachine {
 		
 		else if (typeMachine == 3){
 			price = 50;
-		}		
+		}
+		
  		
 	}
  
 	public void insertCoin(int coin) {
-		if(typeMachine == 1){
-			if(coin == 25){
-				total = total + coin;
-				state.insertCoin(coin);
-			}
-			else {
-				System.out.println("Wrong Coin");
-			}
-		}
-		else if (typeMachine == 2){
-			if(coin == 25){
-				total = total + coin;
-				state.insertCoin(coin);
-			}
-			else {
-				System.out.println("Wrong Coin");
-			}
-		}
-		else if (typeMachine == 3){
-			total = total + coin;
-			state.insertCoin(coin);
-		}		
+		state.insertCoin(coin);
 	}
  
 	public void ejectCoin() {
-		total = 0;
 		state.ejectCoin();
 	}
  
 	public void turnCrank() {
-		state.turnCrank();		
+		state.turnCrank();
 		state.dispense();
-		
 	}
 
 	void setState(State state) {
@@ -124,9 +100,7 @@ public class GumballMachine {
     	return total;
     }
     
-    public void setTotal(int total){
-    	this.total = total;
-    }
+    
     
 	public String toString() {
 		StringBuffer result = new StringBuffer();

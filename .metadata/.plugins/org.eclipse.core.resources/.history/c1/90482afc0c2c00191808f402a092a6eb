@@ -21,15 +21,14 @@ public class SoldState implements State {
 	}
  
 	public void dispense() {
-		//gumballMachine.releaseBall();
+		gumballMachine.releaseBall();
 		if (gumballMachine.getCount() > 0) {
-			if(gumballMachine.getTotal() == gumballMachine.getPrice()){				
+			if(gumballMachine.getTotal() == gumballMachine.getPrice()){
 				gumballMachine.setState(gumballMachine.getNoCoinState());
 			}
 			else{
 				gumballMachine.setState(gumballMachine.getHasCoinState());
 			}
-			gumballMachine.setTotal(gumballMachine.getTotal() - gumballMachine.getPrice());
 			gumballMachine.releaseBall();
 			
 		} else {

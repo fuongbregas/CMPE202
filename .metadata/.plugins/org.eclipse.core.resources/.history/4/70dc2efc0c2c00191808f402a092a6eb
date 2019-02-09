@@ -71,9 +71,9 @@ public class GumballMachine {
 	}
  
 	public void turnCrank() {
-		state.turnCrank();		
+		state.turnCrank();
+		total = total - price;
 		state.dispense();
-		
 	}
 
 	void setState(State state) {
@@ -124,9 +124,7 @@ public class GumballMachine {
     	return total;
     }
     
-    public void setTotal(int total){
-    	this.total = total;
-    }
+    
     
 	public String toString() {
 		StringBuffer result = new StringBuffer();
