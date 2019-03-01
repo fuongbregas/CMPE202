@@ -22,3 +22,7 @@ Collaborators: Tables
 Know: Current State of the Tables
 Do: Change state from Ready to Not Ready
 Collaborators: Tables
+
+Design Pattern: 
+- State Pattern: Table class has 2 states, Ready or Not Ready, which is needed to notify the system if the table is available to take guests
+- Observer Pattern: Table state change is reported to the System class, in order to help customer know the state of Table, System needs to notifies the changes to Customer
