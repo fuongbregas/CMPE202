@@ -1,0 +1,24 @@
+1) Customer
+Know: Name, Phone number, How Many, Order
+Do: Leave required information in the system (name, phone number, how many); Confirm or Leave
+Collaborators: System
+
+2) System
+Know: Map of waiting customers, Map of Tables
+Do: Prioritizes customer based on How Many first; prioritizes customers based on Order; send and receive message; remove customers when they reply to message or not reply for so long; 
+Collaborators: Customer, Tables
+
+3) Tables
+Know: Ready Tables, Not Ready Tables
+Do: Notify the System when table is Ready or Not Ready
+Collaborators: System
+
+4) Ready State
+Know: Current State of the table
+Do: Change state from Not Ready to Ready
+Collaborators: Tables
+
+5) Not Ready State
+Know: Current State of the Tables
+Do: Change state from Ready to Not Ready
+Collaborators: Tables
