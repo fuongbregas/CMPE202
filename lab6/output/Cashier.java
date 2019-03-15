@@ -17,10 +17,11 @@ public class Cashier {
 		printPackingSlip();
 	}
 	public void printReceipt() {
-		System.out.println("\n\nOrder Number " + order.getOrderNumber());
+		System.out.println("Receipt: ");
+		System.out.println("Order Number " + order.getOrderNumber());
 		order.printOrder();
 		
-		System.out.println("Total Cost + 9% Tax:           " + getTotal(order) + "\n\n");
+		System.out.println("Total Cost + 9% Tax:           " + getTotal(order) + "\n");
 	}
 	
 	public ArrayList<Burger> getListOfBurger(){
@@ -30,9 +31,11 @@ public class Cashier {
 	public void printPackingSlip() {
 		System.out.println("Packing Slip: ");
 		order.printPackingSlip();
+		System.out.println("");
 	}
 	
 	public void finalizeOrder(ArrayList<Burger> listOfBurger) {
+		
 		order = new Order(orderNumber, listOfBurger);
 		
 		orderNumber++;

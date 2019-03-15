@@ -27,7 +27,7 @@ public class Order {
 					System.out.println("{{{{ " + entry.getKey().getToppingName() + " }}}}");
 				}
 			}
-			System.out.println("");
+			System.out.println();
 		}
 		
 		
@@ -50,7 +50,7 @@ public class Order {
 					System.out.println("{{{{ " + entry.getKey().getToppingName() + " }}}}");
 				}
 			}
-			System.out.println("");
+			System.out.println();
 		}
 		
 	}
