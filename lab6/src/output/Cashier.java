@@ -12,12 +12,15 @@ public class Cashier {
 	public Cashier() {
 		listOfBurger = new ArrayList<Burger>();		
 	}
-	
+	public void printAll() {
+		printReceipt();
+		printPackingSlip();
+	}
 	public void printReceipt() {
 		System.out.println("\n\nOrder Number " + order.getOrderNumber());
 		order.printOrder();
 		
-		System.out.println("Total Cost + 9% Tax:           " + getTotal(order));
+		System.out.println("Total Cost + 9% Tax:           " + getTotal(order) + "\n\n");
 	}
 	
 	public ArrayList<Burger> getListOfBurger(){

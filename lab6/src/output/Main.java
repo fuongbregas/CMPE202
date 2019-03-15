@@ -16,7 +16,7 @@ public class Main {
 		burger1.addTopping(new Toppings("Jala Grilled"), "B");
 		burger1.addTopping(new Toppings("BACON"), "C");
 		
-		System.out.println("Length: " + burger1.sortAsPackingSlip().size());
+		//System.out.println("Length: " + burger1.sortAsPackingSlip().size());
 		
 		Burger burger2 = new Burger("LTT CAJ", 2.79);
 		ArrayList<Burger> listOfBurger = cashier.getListOfBurger();
@@ -26,6 +26,14 @@ public class Main {
 		cashier.finalizeOrder(listOfBurger);
 		cashier.printPackingSlip();
 		cashier.printReceipt();
+		
+		
+		// Cashier 2: Test new way of adding burger to list
+		Cashier cashier2 = new Cashier();
+		Burger burger3 = new Burger("Test Oder Number", 69);
+		cashier2.getListOfBurger().add(burger3);
+		cashier2.finalizeOrder(cashier2.getListOfBurger());		
+		cashier2.printAll();
 	}
 
 }
