@@ -1,0 +1,38 @@
+DEMO OUTPUT:
+
+FIVE GUYS BURGER
+
+Packing Slip: 
+Item: LBB
+Lettuce
+Tomato
+Cheese
+-> | G Onion
+-> | Jala Grilled
+{{{{ BACON }}}}
+
+Item: LTT CAJ
+
+
+Receipt: 
+Order Number 1
+Item: LBB                  $5.99
+-> | G Onion
+Lettuce
+Tomato
+Cheese
+-> | Jala Grilled
+{{{{ BACON }}}}
+
+Item: LTT CAJ                  $2.79
+
+Total Cost + 9% Tax:           9.57
+
+Receipt: 
+Order Number 2
+Item: Test Oder Number                  $69.0
+
+Total Cost + 9% Tax:           75.21
+
+Packing Slip: 
+Item: Test Oder Number
