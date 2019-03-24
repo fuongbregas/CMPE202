@@ -14,6 +14,7 @@ public class Side extends LeafDecorator {
 		if(options.length > 0) {
 			this.price += options.length * 3.00 ;
 		}
+		
 	}
 
 	@Override
