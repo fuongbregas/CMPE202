@@ -1,8 +1,8 @@
 Order
 
- Build Your Own Burger 3.00
+ Build Your Own Burger 25.00
  
-    Beef + 1/2lb. + On A Bun
+    Organic Bison* + 1/2lb. + On A Bun
     
     Yellow American + Spicy Jalapeno Jack
     
@@ -14,25 +14,24 @@ Order
     
     Marinated Tomatoes
     
-    Ciabatta (Vegan)
+    Ciabatta(Vegan)
     
     Shoestring Fries
     
- Build Your Own Burger 11.50
+ Build Your Own Burger 19.50
  
     Hormone & Antibiotic Free Beef* + 1/3lb. + On A Bun
     
     Smoked Gouda + Greek Feta
     
     Fresh Mozzarella
-
+    
     Habanero Salsa
     
     Crushed Peanuts
     
     Sunny Side Up Egg* + Marinated Tomatoes
     
-    Ciabatta (Vegan)
+    Gluten-Free Bun
     
     Shoestring Fries
-    
