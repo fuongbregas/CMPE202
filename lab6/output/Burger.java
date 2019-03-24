@@ -40,17 +40,17 @@ public class Burger {
 		LinkedList<Map.Entry<Toppings, String>> list = new LinkedList<Map.Entry<Toppings, String>>(listOfToppings.entrySet());
 		LinkedHashMap<Toppings, String> sortedMap = new LinkedHashMap<Toppings, String>();
 
-        // Sort the position of Toppings
-        Collections.sort(list, new Comparator<Map.Entry<Toppings, String>>() {
-            public int compare(Map.Entry<Toppings, String> o1, Map.Entry<Toppings, String> o2) {
-                return (o1.getValue()).compareTo(o2.getValue());
-            }
-        }); 
+                // Sort the position of Toppings
+                Collections.sort(list, new Comparator<Map.Entry<Toppings, String>>() {
+                       public int compare(Map.Entry<Toppings, String> o1, Map.Entry<Toppings, String> o2) {
+                               return (o1.getValue()).compareTo(o2.getValue());
+                       } 
+                }); 
         
-        for (Map.Entry<Toppings, String> entry : list) {
-            sortedMap.put(entry.getKey(), entry.getValue());
-        }
+                for (Map.Entry<Toppings, String> entry : list) {
+                       sortedMap.put(entry.getKey(), entry.getValue());
+                }
 
-        return sortedMap;
-    }
+                return sortedMap;
+         }
 }
