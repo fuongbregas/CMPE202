@@ -5,21 +5,33 @@ public class CreditCardNum implements IDisplayComponent, IKeyEventHandler
 
 	private IKeyEventHandler nextHandler ;
 	private String number = "" ;
+	private CreditCardSpace ccSpace;
 
     public void setNext( IKeyEventHandler next) {
     	this.nextHandler = next ;
+    	
     }	
 
 	public String display() {
-		if ( number.equals("") )
+		if ( number.equals("") ) {
 			return "[4444 4444 4444 4444]" + "  " ;
+		}			
+		else if(ccSpace == null) {
+			return "[" + number + "]" + "  ";
+		}
 		else
-			return "[" + number + "]" + "  " ;
+			return "[" + ccSpace.spacing(number) + "]" + "  " ;
 	}	
 
 	public void key(String ch, int cnt) {
-		if ( cnt <= 16 )
+		String checker = ch.toLowerCase();
+		if ( cnt <= 16 ) {
+			if(checker.equals("x") && number.length() > 0) {
+				number = number.substring(number.length() - 1);
+			}
 			number += ch ;
+		}
+			
 		else if ( nextHandler != null )
 			nextHandler.key(ch, cnt) ;
 	}	
@@ -27,5 +39,8 @@ public class CreditCardNum implements IDisplayComponent, IKeyEventHandler
 	public void addSubComponent( IDisplayComponent c ) {
 		return ; // do nothing
 	}
-
+	public void decorate(CreditCardSpace ccSpace) {
+		this.ccSpace = ccSpace;
+	}
+	
 }

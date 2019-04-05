@@ -5,27 +5,44 @@ public class CreditCardExp implements IDisplayComponent, IKeyEventHandler
 
 	private IKeyEventHandler nextHandler ;
 	private String date = "" ;
+	private ExpirationDate expDate;
+	
+	
 
     public void setNext( IKeyEventHandler next) {
     	this.nextHandler = next ;
     }	
 
 	public String display() {
-		if ( date.equals("") )
+		if ( date.equals("") ) {
 			return "[MM/YY]" + "  " ;
+		}			
+		else if(expDate == null) {
+			return "[" + date.trim() + "]" + "  ";
+		}
 		else
-			return "[" + date + "]" + "  " ;
+			return "[" + expDate.spacing(date) + "]" + "  " ;
 	}	
 
 	public void key(String ch, int cnt) {
-		if ( cnt >= 17 && cnt <= 20  )
+		String checker = ch.toLowerCase();
+		if ( cnt >= 17 && cnt <= 20  ) {
+			if(checker.equals("x") && date.length() > 0) {
+				date = date.substring(date.length() - 1);
+			}		
 			date += ch ;
-		else if ( nextHandler != null )
+		}
+		else if ( nextHandler != null ) {
 			nextHandler.key(ch, cnt) ;
+		}
 	}	
 
 	public void addSubComponent( IDisplayComponent c ) {
 		return ; // do nothing
+	}
+	
+	public void decorate(ExpirationDate expDate) {
+		this.expDate = expDate;
 	}
 
 }

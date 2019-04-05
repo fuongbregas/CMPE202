@@ -21,6 +21,9 @@ public class App {
         screen.addSubComponent(num);
         screen.addSubComponent(exp);
         screen.addSubComponent(cvc);
+        
+        exp.decorate(new ExpirationDate());
+        num.decorate(new CreditCardSpace());
 
         count = 0;
 
@@ -39,8 +42,17 @@ public class App {
     }
 
     public void key(String ch) {
-        count++;
-        screen.key(ch, count);
+    	if(ch.matches("0-9")) {
+    		if(count < 23) {
+    			count++;
+    	        screen.key(ch, count);
+    		}
+    	}
+    	else if(ch.toLowerCase().equals("x")) {
+    		screen.key(ch, count);
+    		count --;
+    		
+    	}
     }
 
 }
