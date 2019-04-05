@@ -21,6 +21,8 @@ public class App {
         screen.addSubComponent(num);
         screen.addSubComponent(exp);
         screen.addSubComponent(cvc);
+        
+        exp.decorate(new ExpirationDate());
 
         count = 0;
 
