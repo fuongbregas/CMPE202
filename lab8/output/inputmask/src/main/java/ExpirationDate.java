@@ -1,5 +1,5 @@
 
-public class ExpirationDate implements IDecorator, IDisplayComponent{
+public class ExpirationDate implements IDecorator{
 	
 	
 	
@@ -13,23 +13,12 @@ public class ExpirationDate implements IDecorator, IDisplayComponent{
 		
 		for (int i = 0; i < date.length(); i ++) {
 			if(i == 2) {
-				dateBuffer.append("/" + date.charAt(i));
+				dateBuffer.append("/" );
 			}
 			dateBuffer.append(date.charAt(i));
 		}
 		return String.valueOf(dateBuffer);
 	}
 
-	@Override
-	public String display() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void addSubComponent(IDisplayComponent c) {
-		// TODO Auto-generated method stub
-		
-	}
-
+	
 }
