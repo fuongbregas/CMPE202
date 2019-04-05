@@ -11,9 +11,11 @@ public class CreditCardSpace implements IDecorator, IDisplayComponent{
 		
 		for(int i = 0; i < card.length(); i++) {
 			if(i == 4 || i == 8 || i == 12) {
-				cardBuffer.append(" ");
+				cardBuffer.append(" " + card.charAt(i));
 			}
-			cardBuffer.append(card.charAt(i));
+			else {
+				cardBuffer.append(card.charAt(i));
+			}			
 		}
 		return String.valueOf(cardBuffer);
 	}

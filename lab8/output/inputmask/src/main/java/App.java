@@ -14,16 +14,14 @@ public class App {
     public App() {
 
         screen = new Screen();
-        num = new CreditCardNum();
-        exp = new CreditCardExp();
+        num = new CreditCardNum(new CreditCardSpace());
+        exp = new CreditCardExp(new ExpirationDate());
         cvc = new CreditCardCVC();
 
         screen.addSubComponent(num);
         screen.addSubComponent(exp);
         screen.addSubComponent(cvc);
-        
-        exp.decorate(new ExpirationDate());
-        num.decorate(new CreditCardSpace());
+               
 
         count = 0;
 
@@ -42,15 +40,18 @@ public class App {
     }
 
     public void key(String ch) {
-    	if(ch.matches("0-9")) {
+    	if(ch.matches("[0-9]")) {
     		if(count < 23) {
     			count++;
     	        screen.key(ch, count);
     		}
     	}
-    	else if(ch.toLowerCase().equals("x")) {
-    		screen.key(ch, count);
+    	System.out.println("\nCount = " + count);
+    	
+    	if(ch.toLowerCase().equals("x") && count > 0) {
     		count --;
+    		screen.key(ch, count);
+    		
     		
     	}
     }

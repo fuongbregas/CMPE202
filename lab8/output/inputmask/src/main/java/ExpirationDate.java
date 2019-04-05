@@ -13,9 +13,11 @@ public class ExpirationDate implements IDecorator, IDisplayComponent{
 		
 		for (int i = 0; i < date.length(); i ++) {
 			if(i == 2) {
-				dateBuffer.append("/" );
+				dateBuffer.append("/" + date.charAt(i));
 			}
-			dateBuffer.append(date.charAt(i));
+			else {
+				dateBuffer.append(date.charAt(i));
+			}			
 		}
 		return String.valueOf(dateBuffer);
 	}
