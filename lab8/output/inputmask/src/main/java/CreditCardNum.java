@@ -30,7 +30,7 @@ public class CreditCardNum implements IDisplayComponent, IKeyEventHandler
 	public void key(String ch, int cnt) {
 		String checker = ch.toLowerCase();
 		if ( cnt <= 16 ) {
-			if(checker.equals("x") && number.length() > 0) {
+			if(checker.matches("x") && number.length() > 0) {
 				number = number.substring(0, number.length() - 1);
 			}
 			else {

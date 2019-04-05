@@ -42,17 +42,17 @@ public class App {
     public void key(String ch) {
     	if(ch.matches("[0-9]")) {
     		if(count < 23) {
-    			count++;
-    	        screen.key(ch, count);
-    		}
+    			count ++ ;
+    			screen.key(ch, count);
+    		}   		
+    		
     	}
     	System.out.println("\nCount = " + count);
     	
-    	if(ch.toLowerCase().equals("x") && count > 0) {
-    		count --;
+    	if(ch.toLowerCase().matches("x") && count > 0) {
+    		
     		screen.key(ch, count);
-    		
-    		
+    		count --;
     	}
     }
 
