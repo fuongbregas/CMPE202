@@ -1,4 +1,4 @@
 
 public interface IDecorator {
-	public void spacing(String character);
+	public String spacing(String character);
 }
