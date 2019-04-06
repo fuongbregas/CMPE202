@@ -1,5 +1,5 @@
 
-public class CreditCardSpace implements IDecorator, IDisplayComponent{
+public class CreditCardSpace implements IDecorator{
 
 	public CreditCardSpace() {
 		// TODO Auto-generated constructor stub
@@ -20,16 +20,6 @@ public class CreditCardSpace implements IDecorator, IDisplayComponent{
 		return String.valueOf(cardBuffer);
 	}
 
-	@Override
-	public String display() {
-		// TODO Auto-generated method stub
-		return " ";
-	}
-
-	@Override
-	public void addSubComponent(IDisplayComponent c) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 	
 }
