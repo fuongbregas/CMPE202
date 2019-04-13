@@ -1,10 +1,10 @@
 Source Example: https://www.journaldev.com/1540/decorator-design-pattern-in-java-example
 
 I choose Decorator Pattern. As Decorator pattern let me modify object on run time, I can keep creating new Cars from previously created cars.
-By using Lambda for decorator pattern, I don't have to make sub-Cars from the base car, everything can be made in CarLambda.java. 
+By using Lambda for decorator pattern, I don't have to make sub-Cars decorators from the base car, everything can be made in CarLambda.java. 
 With shorter implementation, lambda let me create similar output to the original.
 
 ![Original](https://github.com/fuongbregas/cmpe202/blob/master/lab9/orginal.PNG)
-
+![Alt text](github.com/fuongbregas/cmpe202/blob/master/lab9/orginal.PNG)
 ![With Lambda](https://github.com/fuongbregas/cmpe202/blob/master/lab9/lambda.PNG)
 
