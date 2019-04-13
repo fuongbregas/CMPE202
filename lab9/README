@@ -5,6 +5,6 @@ By using Lambda for decorator pattern, I don't have to make sub-Cars decorators 
 With shorter implementation, lambda let me create similar output to the original.
 
 ![Original](https://github.com/fuongbregas/cmpe202/blob/master/lab9/orginal.PNG)
-![Alt text](github.com/fuongbregas/cmpe202/blob/master/lab9/orginal.PNG)
+
 ![With Lambda](https://github.com/fuongbregas/cmpe202/blob/master/lab9/lambda.PNG)
 
